@@ -1,7 +1,7 @@
 "use client";
 import { Dark } from "@/constant/svgs";
 import "./dock.scss";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "@/context";
 import Avatar from "@/assets/images/Dock/avatar.png";
 import Stack from "@/assets/images/Dock/stack.svg";
@@ -55,8 +55,19 @@ const dockLinks = [
     image: Mail,
   },
 ];
+
 const Dock = () => {
-  return window.innerWidth < 768 ? <MobileDock /> : <DesktopDock />;
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  const windowResize = () => {
+    setIsMobile(window.innerWidth < 768 ? true : false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", windowResize);
+  }, []);
+
+  return isMobile ? <MobileDock /> : <DesktopDock />;
 };
 
 export default Dock;

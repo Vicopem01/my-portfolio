@@ -3,6 +3,8 @@ import { ThemeContext } from "@/context";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import "./globals.css";
+import Dock from "@/components/Dock/dock";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   let storedTheme;
@@ -20,7 +22,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <Component {...pageProps} />
+      <div className="font-gilroymedium">
+        <Component {...pageProps} />
+      </div>
+      <div>{Dock()}</div>
       <Analytics />
     </ThemeContext.Provider>
   );

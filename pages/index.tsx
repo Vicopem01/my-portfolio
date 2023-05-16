@@ -18,7 +18,7 @@ const Landing = () => {
           <Image src={Star} alt="" className="ml-auto" />
         </div>
         <div className="container">
-          <h1 className="text-5xl text-center px-2 lg:w-10/12 mx-auto font-gilroybold xl:text-9xl lg:text-8xl">
+          <h1 className="text-5xl text-center px-2 lg:w-10/12 mx-auto font-gilroybold xl:text-9xl lg:text-7xl">
             I&#39;m Victor Ogunjobi 🤗 <br />A full stack developer.
           </h1>
           <p className="lg:w-9/12 text-center mx-auto pt-8">
