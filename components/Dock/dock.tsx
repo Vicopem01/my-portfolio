@@ -26,8 +26,8 @@ const dockLinks = [
     image: Projects,
   },
   {
-    to: "/stack",
-    text: "Stack",
+    to: "/stacks",
+    text: "Stacks",
     image: Stack,
   },
   {
