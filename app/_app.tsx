@@ -1,3 +1,4 @@
+"use client";
 import { ThemeContext } from "@/context";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
@@ -12,8 +13,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = useState(storedTheme || "dark");
 
   useEffect(() => {
-    if (theme === "light") document.body.classList.add("light");
-    else document.body.classList.remove("light");
+    if (theme === "light") document.documentElement.classList.add("light");
+    else document.documentElement.classList.remove("light");
     localStorage.setItem("theme", theme);
   }, [theme]);
 
