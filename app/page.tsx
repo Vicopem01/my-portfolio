@@ -1,6 +1,6 @@
 import "./page.scss";
-import { Text } from "@/constant";
-import Star from "@/assets/star.png";
+import Text from "@/public/images/landing/text.svg";
+import Star from "@/public/star.png";
 import Image from "next/image";
 
 const Landing = () => {

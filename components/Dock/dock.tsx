@@ -1,16 +1,16 @@
 "use client";
-import { Dark } from "@/constant/svgs";
+import { Dark } from "@/constant";
 import "./dock.scss";
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "@/context";
-import Avatar from "@/assets/images/Dock/avatar.png";
-import Stack from "@/assets/images/Dock/stack.svg";
-import Projects from "@/assets/images/Dock/projects.svg";
-import Twitter from "@/assets/images/Dock/twitter.svg";
-import LinkedIn from "@/assets/images/Dock/linkedIn.svg";
-import Home from "@/assets/images/Dock/home.svg";
-import Mail from "@/assets/images/Dock/mail.svg";
-import GitHub from "@/assets/images/Dock/github-dark.png";
+import Avatar from "@/public/images/Dock/avatar.png";
+import Stack from "@/public/images/Dock/stack.svg";
+import Projects from "@/public/images/Dock/projects.svg";
+import Twitter from "@/public/images/Dock/twitter.svg";
+import LinkedIn from "@/public/images/Dock/linkedIn.svg";
+import Home from "@/public/images/Dock/home.svg";
+import Mail from "@/public/images/Dock/mail.svg";
+import GitHub from "@/public/images/Dock/github-dark.png";
 import Link from "next/link";
 import Image from "next/image";
 

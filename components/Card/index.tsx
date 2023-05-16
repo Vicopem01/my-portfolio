@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import Button from "../Button";
 
 interface ICard {
   heading: string;
-  img: string;
+  img: StaticImageData;
   skills: string;
   link: string;
 }

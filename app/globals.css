@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: "gilroy-medium";
-  src: url("../assets/gilroy_font/Gilroy-Regular.otf");
+  src: url("../public/gilroy_font/Gilroy-Regular.otf");
 }
 
 @font-face {
   font-family: "gilroy-bold";
-  src: url("../assets/gilroy_font/Gilroy-Bold.otf");
+  src: url("../public/gilroy_font/Gilroy-Bold.otf");
 }
 
 :root {
