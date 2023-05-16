@@ -1,0 +1,87 @@
+.container {
+  border-radius: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50rem;
+  padding: 0.8rem;
+  margin: 1rem auto 0 auto;
+}
+.container button {
+  border: none;
+}
+.container > a,
+.container button {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.5s;
+  width: 60px;
+  height: 60px;
+}
+
+.circle {
+  border: 5px solid rgba(255, 255, 255, 0.27);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.circle img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  transform: rotate(5deg);
+}
+.line {
+  display: inline-block;
+  width: 2px;
+  height: 60px;
+  background: rgba(196, 196, 196, 0.52);
+}
+.container p {
+  position: absolute;
+  display: none;
+  top: -60px;
+  font-size: 12px;
+  width: 100px;
+  text-align: center;
+  font-family: gilroy-bold;
+}
+.github img {
+  width: 30px;
+}
+.container > a:hover > p,
+.container > button:hover > p {
+  display: block;
+}
+.container > button:hover,
+.container > a:hover {
+  transform: scale(1.5);
+  margin: 0 0.8rem;
+  border-radius: 50%;
+}
+
+.container a svg path,
+.container button svg path {
+  stroke: #fff;
+  fill: #fff;
+}
+
+/* add light theme styles cos default is dark */
+.light {
+  background: rgba(34, 34, 34, 0.2);
+}
+
+.light a svg path,
+.light button svg path {
+  fill: #000;
+  stroke: #000;
+}
+
+.light a,
+.light button {
+  background: rgb(0 0 0 / 20%) !important;
+}
