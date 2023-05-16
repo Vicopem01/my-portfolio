@@ -81,7 +81,7 @@ const DesktopDock = () => {
 
   return (
     <div
-      className={`flex dock-hover bg-[rgba(34,34,34,0.2)] dark:bg-[rgba(114,114,114,0.17)] ${theme}`}
+      className={`fixed left-1/2 -translate-x-1/2 bottom-0 flex dock-hover bg-[rgba(34,34,34,0.2)] dark:bg-[rgba(114,114,114,0.17)] ${theme}`}
     >
       <div className="circle">
         <Image src={Avatar} alt="avatar" />
@@ -91,7 +91,7 @@ const DesktopDock = () => {
       {dockLinks.map((link, index: number) =>
         link.external ? (
           <a
-            href="https://github.com/Vicopem01"
+            href={link.to}
             target="_blank"
             rel="noopener noreferrer"
             className="github"

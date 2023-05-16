@@ -9,11 +9,11 @@ const Projects = () => {
     <main className="main">
       <div>
         <h3 className="text-6xl font-bold">Featured Projects</h3>
-        <p className="text-[rgba(255,255,255,0.2)] pl-24 pb-8 text-8xl">
+        {/* <p className="text-[rgba(255,255,255,0.2)] pl-24 pb-8 text-8xl">
           Projects
-        </p>
+        </p> */}
       </div>
-      <div className="cardContainer">
+      <div className="cardContainer flex">
         {data.map((card, index) => (
           <Cards
             heading={card.heading}

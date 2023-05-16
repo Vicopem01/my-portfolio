@@ -10,12 +10,12 @@ interface ICard {
 }
 const Cards = ({ heading, img, skills, link }: ICard) => {
   return (
-    <div className="block w-[20rem] my-3 mx-9">
-      <div className="flex flex-col justify-start ">
-        <p className="text-xl">{heading}</p>
+    <div className="block my-3 mx-9">
+      <div className="flex flex-col justify-start w-[20rem]">
+        <p className="text-lg mb-4 h-[8rem]">{heading}</p>
         <Image src={img} alt="" />
         <div>
-          <span className="text-sm">{skills}</span>
+          <span className="text-xs">{skills}</span>
         </div>
         <Button text="Visit Site" href={link} />
       </div>
