@@ -13,6 +13,7 @@ import Mail from "@/public/images/Dock/mail.svg";
 import GitHub from "@/public/images/Dock/github-dark.png";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 const dockLinks = [
   {
@@ -57,17 +58,11 @@ const dockLinks = [
 ];
 
 const Dock = () => {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  const windowResize = () => {
-    setIsMobile(window.innerWidth < 768 ? true : false);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", windowResize);
-  }, []);
-
-  return isMobile ? <MobileDock /> : <DesktopDock />;
+  return (
+    <div>
+      <MobileDock /> <DesktopDock />
+    </div>
+  );
 };
 
 export default Dock;
@@ -81,7 +76,7 @@ const DesktopDock = () => {
 
   return (
     <div
-      className={`fixed left-1/2 -translate-x-1/2 bottom-0 flex dock-hover bg-[rgba(34,34,34,0.2)] dark:bg-[rgba(114,114,114,0.17)] ${theme}`}
+      className={`fixed left-1/2 -translate-x-1/2 bottom-0 dock-hover bg-[rgba(34,34,34,0.2)] dark:bg-[rgba(114,114,114,0.17)] hidden md:flex`}
     >
       <div className="circle">
         <Image src={Avatar} alt="avatar" />
@@ -97,7 +92,7 @@ const DesktopDock = () => {
             className="github"
             key={index}
           >
-            <p>{link.text}</p>
+            <span>{link.text}</span>
             <Image
               className="invert brightness-0 dark:invert-100"
               src={link.image}
@@ -113,26 +108,32 @@ const DesktopDock = () => {
               alt={link.text}
               width={30}
             />
-            <p>{link.text}</p>
+            <span>{link.text}</span>
           </Link>
         )
       )}
       <span className="line"></span>
 
       <button onClick={handleClick}>
-        <p>Theme</p>
+        <span>Theme</span>
         <Dark />
       </button>
     </div>
   );
 };
+
 const MobileDock = () => {
   const [profileActive, setProfileActive] = useState<boolean>(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setProfileActive(false);
+  }, [pathname]);
 
   return (
-    <div className="fixed left-10 mobile-dock bottom-10">
+    <div className="fixed right-5 mobile-dock bottom-10 block md:hidden">
       {profileActive && (
-        <div className="mobile-dock-expanded relative rounded-md bg-[rgba(34,34,34,0.2)] dark:bg-[rgba(114,114,114,0.17)]">
+        <div className="mobile-dock-expanded relative rounded-md bg-[rgba(34,34,34,0.2)] dark:bg-[rgba(30,30,30)]">
           {dockLinks.map((link, index: number) =>
             link.external ? (
               <a
@@ -141,21 +142,21 @@ const MobileDock = () => {
                 rel="noopener noreferrer"
                 key={index}
               >
+                <span>{link.text}</span>
                 <Image
                   className="invert brightness-0 dark:invert-100"
                   src={link.image}
                   alt={link.text}
                 />
-                <p>{link.text}</p>
               </a>
             ) : (
               <Link href={link.to} key={index}>
+                <span>{link.text}</span>
                 <Image
                   className="invert brightness-0 dark:invert-100"
                   src={link.image}
                   alt={link.text}
                 />
-                <p>{link.text}</p>
               </Link>
             )
           )}
@@ -174,6 +175,7 @@ const MobileDock = () => {
           onClick={() => setProfileActive(true)}
         >
           <Image src={Avatar} alt="avatar" />
+          <p className="text-base font-bold">Click me!</p>
         </div>
       )}
     </div>

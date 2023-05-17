@@ -8,7 +8,7 @@
   button {
     border: none;
   }
-  > a,
+  a,
   button {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -20,15 +20,15 @@
     transition: all 0.5s;
     width: 50px;
     height: 50px;
-  }
-  p {
-    position: absolute;
-    display: none;
-    top: -60px;
-    font-size: 12px;
-    width: 100px;
-    text-align: center;
-    font-family: gilroy-bold;
+    span {
+      position: absolute;
+      display: none;
+      top: -60px;
+      font-size: 12px;
+      width: 100px;
+      text-align: center;
+      font-family: gilroy-bold;
+    }
   }
 }
 
@@ -51,8 +51,8 @@
   background: rgba(196, 196, 196, 0.52);
 }
 
-.dock-hover > a:hover > p,
-.dock-hover > button:hover > p {
+.dock-hover > a:hover > span,
+.dock-hover > button:hover > span {
   display: block;
 }
 .dock-hover > button:hover,
@@ -68,48 +68,34 @@
   fill: #fff;
 }
 
-/* add light theme styles cos default is dark */
-
-// .light a svg path,
-// .light button svg path {
-//   fill: #000;
-//   stroke: #000;
-// }
-
-// .light a,
-// .light button {
-//   background: rgb(0 0 0 / 20%) !important;
-// }
-
 .mobile-dock {
   .mobile-dock-expanded {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
-    width: 5.1rem;
+    padding: 1rem;
+    width: 9.3rem;
     height: 35rem;
     a {
       position: relative;
       margin-bottom: 30px;
-      width: 200px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       img {
         width: 35px;
         height: 35px;
       }
-    }
-    p {
-      text-align: left;
-      padding-left: 40px;
-      width: 200px;
+      span {
+        text-align: center;
+        padding-right: 20px;
+      }
     }
   }
   .dock-profile {
-    border: 5px solid rgba(255, 255, 255, 0.27);
-    border-radius: 50%;
     cursor: pointer;
     img {
+      border-radius: 50%;
+      border: 5px solid rgba(255, 255, 255, 0.27);
       border-radius: 50%;
       width: 100%;
       height: 100%;
@@ -117,20 +103,24 @@
     }
   }
   .profile-dormant {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
+    p {
+      position: absolute;
+      bottom: 10px;
+      left: -80px;
+    }
   }
   .profile-active {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
     img {
       width: 50px;
       height: auto;
     }
     p {
-      display: none;
-      position: absolute;
-      bottom: 53px;
-      right: -173px;
-      z-index: 9;
+      padding-right: 20px;
     }
     &:hover {
       p {
