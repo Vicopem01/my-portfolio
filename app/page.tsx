@@ -7,10 +7,12 @@ const Landing = () => {
   return (
     <main className="relative py-16 main font-gilroymedium dark:text-white text-black">
       <div className="block md:hidden flex justify-between items-center custom-images my-12 mx-8">
-        <Text />
+        <span className="dark:invert-0 invert">
+          <Text />
+        </span>
         <Image src={Star} alt="" />
       </div>
-      <div className="absolute text1">
+      <div className="absolute text1 dark:invert-0 invert">
         <Text />
       </div>
       <div className="absolute star2">
@@ -28,7 +30,7 @@ const Landing = () => {
           possible and achieving maximum client satisfaction.
         </p>
       </div>
-      <div className="absolute text2">
+      <div className="absolute text2 dark:invert-0 invert">
         <Text />
       </div>
       <div className="absolute star1">

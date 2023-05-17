@@ -76,7 +76,7 @@ const DesktopDock = () => {
 
   return (
     <div
-      className={`fixed left-1/2 -translate-x-1/2 bottom-0 dock-hover bg-[rgba(34,34,34,0.2)] dark:bg-[rgba(114,114,114,0.17)] hidden md:flex`}
+      className={`fixed left-1/2 -translate-x-1/2 bottom-0 dock-hover bg-[rgba(0,0,0,0.83)] dark:bg-[rgba(114,114,114,0.17)] hidden md:flex`}
     >
       <div className="circle">
         <Image src={Avatar} alt="avatar" />

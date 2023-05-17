@@ -15,8 +15,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState(storedTheme || "dark");
 
   useEffect(() => {
-    if (theme === "light") document.documentElement.classList.add("light");
-    else document.documentElement.classList.remove("light");
+    if (theme === "dark") document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
     localStorage.setItem("theme", theme);
   }, [theme]);
 
@@ -29,7 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           content="Full stack developer ~ Web and blockchain security enthusiast"
         />
       </head>
-      <body className="transition-300 relative m-0 min-h-screen dark:text-white text-black font-gilroymedium">
+      <body className="transition-300 relative m-0 min-h-screen bg-white dark:bg-black dark:text-white text-black font-gilroymedium">
         <ThemeContext.Provider value={{ theme, setTheme }}>
           {children}
           <Dock />
