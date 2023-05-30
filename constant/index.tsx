@@ -3,13 +3,14 @@ import Spaceet from "@/public/images/Projects/spaceet.png";
 import Aview from "@/public/images/Projects/aview.png";
 import Cova from "@/public/images/Projects/cova.png";
 import DLHS from "@/public/images/Projects/d-lhs.png";
+import SaySwitch from "@/public/images/Projects/sayswitch.png";
 
 export const data = [
   {
     heading:
       "AVIEW works with the top translators and voiceover talent so that you can quickly grow your international influence, A-View at a time.",
     img: Aview,
-    skills: "Next JS • Node JS • Tailwind • Firebase",
+    skills: "Next JS • Node JS • AWS • Tailwind • Firebase",
     link: "https://aviewint.com",
   },
   {
@@ -18,6 +19,13 @@ export const data = [
     img: Cova,
     skills: "React • TypeScript • GraphQL • SCSS",
     link: "https://getcova.com",
+  },
+  {
+    heading:
+      "A complete feature - rich payment solution for both offline and online acquiring",
+    img: SaySwitch,
+    skills: "Next JS • Node JS • Tailwind",
+    link: "https://www.sayswitchgroup.com",
   },
   {
     heading:

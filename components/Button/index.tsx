@@ -6,7 +6,7 @@ interface IButton {
 const Button = ({ text, href }: IButton) => {
   return href ? (
     <a
-      className={`relative group/button mt-8 block w-[100px]`}
+      className={`relative group/button mt-8 block w-[120px]`}
       href={href}
       target="_blank"
       rel="noopener noreferrer"
