@@ -36,7 +36,7 @@ const Stacks = () => {
         {
           header: "APIS",
           language: "REST, GraphQL",
-          level: "Junior",
+          level: "Mid",
         },
       ],
     },
