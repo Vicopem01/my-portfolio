@@ -75,11 +75,11 @@ const Stacks = () => {
             {work.history.map((history, index) => (
               <div key={`history-${index}`}>
                 <p className="text-lg my-2">{history.header}</p>
-                <p className="pl-5">{history.language}</p>
-                <small className="opacity-60 mt-2 mb-10 block pl-5">
+                <p className="pl-5 mt-2 mb-10">{history.language}</p>
+                {/* <small className="opacity-60 mt-2 mb-10 block pl-5">
                   Level &nbsp;&#8226;&nbsp;
                   {history.level}
-                </small>
+                </small> */}
               </div>
             ))}
           </div>
