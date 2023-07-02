@@ -6,17 +6,14 @@ const Stacks = () => {
         {
           header: "Languages",
           language: "JavaScript, TypeScript",
-          level: "Mid",
         },
         {
           header: "Frameworks",
           language: "ReactJS, Next JS",
-          level: "Senior",
         },
         {
           header: "Styling",
           language: "Tailwind, SCSS, CSS Modules",
-          level: "Senior",
         },
       ],
     },
@@ -26,17 +23,18 @@ const Stacks = () => {
         {
           header: "Languages",
           language: "JavaScript, TypeScript",
-          level: "Mid",
+        },
+        {
+          header: "Framework",
+          language: "Express, Nest Js",
         },
         {
           header: "Database",
           language: "Mongo DB, Firebase",
-          level: "Mid",
         },
         {
           header: "APIS",
           language: "REST, GraphQL",
-          level: "Mid",
         },
       ],
     },
@@ -46,17 +44,14 @@ const Stacks = () => {
         {
           header: "Devops",
           language: "AWS, C-PANEL",
-          level: "Mid",
         },
         {
           header: "Version Control",
           language: "GitHub, GitLab",
-          level: "Senior",
         },
         {
           header: "Others",
-          language: "Solidity, Python",
-          level: "Junior",
+          language: "Solidity, Python, Ether JS",
         },
       ],
     },
@@ -69,17 +64,13 @@ const Stacks = () => {
         {WORK_EXPERIENCE.map((work, index: number) => (
           <div
             key={index}
-            className={`shadow rounded-bl-none rounded-br-none rounded-tl-[20px] rounded-tr-[20px] p-6 w-full mx-5 lg:w-1/3`}
+            className={`shadow rounded-bl-none rounded-br-none rounded-tl-[20px] rounded-tr-[20px] p-6 w-full mx-5 lg:w-1/3 shadow`}
           >
             <p className="text-lg underline font-semibold mb-4">{work.title}</p>
             {work.history.map((history, index) => (
               <div key={`history-${index}`}>
                 <p className="text-lg my-2">{history.header}</p>
                 <p className="pl-5 mt-2 mb-10">{history.language}</p>
-                {/* <small className="opacity-60 mt-2 mb-10 block pl-5">
-                  Level &nbsp;&#8226;&nbsp;
-                  {history.level}
-                </small> */}
               </div>
             ))}
           </div>

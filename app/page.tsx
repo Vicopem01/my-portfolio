@@ -1,19 +1,19 @@
 import "./page.scss";
-import Star from "@/public/star.png";
+import Star from "@/public/images/Landing/star.png";
 import Image from "next/image";
-import { Text } from "@/constant";
+import Text from "@/public/svgs/text.svg";
 
 const Landing = () => {
   return (
     <main className="relative py-16 main font-gilroymedium dark:text-white text-black">
       <div className="block md:hidden flex justify-between items-center custom-images my-12 mx-8">
         <span className="dark:invert-0 invert">
-          <Text />
+          <Image src={Text} alt="" />
         </span>
         <Image src={Star} alt="" />
       </div>
       <div className="absolute text1 dark:invert-0 invert">
-        <Text />
+        <Image src={Text} alt="" />
       </div>
       <div className="absolute star2">
         <Image src={Star} alt="" className="ml-auto" />
@@ -31,7 +31,7 @@ const Landing = () => {
         </p>
       </div>
       <div className="absolute text2 dark:invert-0 invert">
-        <Text />
+        <Image src={Text} alt="" />
       </div>
       <div className="absolute star1">
         <Image src={Star} alt="" />
