@@ -13,7 +13,7 @@ const Stacks = () => {
         },
         {
           header: "Styling",
-          language: "Tailwind, SCSS, CSS Modules",
+          language: "Tailwind, SCSS, SASS, CSS Modules",
         },
       ],
     },
@@ -25,16 +25,16 @@ const Stacks = () => {
           language: "JavaScript, TypeScript",
         },
         {
-          header: "Framework",
+          header: "Frameworks",
           language: "Express, Nest Js",
         },
         {
-          header: "Database",
-          language: "Mongo DB, Firebase",
+          header: "Databases",
+          language: "NoSQL Database, Realtime Database",
         },
         {
           header: "APIS",
-          language: "REST, GraphQL",
+          language: "REST, GraphQL, Websocket (Socket.IO)",
         },
       ],
     },
@@ -43,15 +43,15 @@ const Stacks = () => {
       history: [
         {
           header: "Devops",
-          language: "AWS, C-PANEL",
+          language: "AWS Cloud, C-PANEL, Google Cloud Platform",
         },
         {
           header: "Version Control",
-          language: "GitHub, GitLab",
+          language: "Git, GitHub, GitLab",
         },
         {
           header: "Others",
-          language: "Solidity, Python, Ether JS",
+          language: "Solidity, Python, Ether JS, GoLang(Basic)",
         },
       ],
     },
