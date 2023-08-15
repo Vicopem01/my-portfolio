@@ -34,7 +34,7 @@ const Stacks = () => {
         },
         {
           header: "APIS",
-          language: "REST, GraphQL, Websocket (Socket.IO)",
+          language: "REST Api, GraphQL, Websocket (Socket.IO)",
         },
       ],
     },
