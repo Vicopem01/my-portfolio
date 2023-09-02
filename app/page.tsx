@@ -7,7 +7,7 @@ const Landing = () => {
   return (
     <main className="relative py-16 main font-gilroymedium dark:text-white text-black">
       <div className="block md:hidden flex justify-between items-center custom-images my-12 mx-8">
-        <span className="dark:invert-0 invert">
+        <span className="dark:invert-0 invert shaping-img">
           <Image src={Text} alt="" />
         </span>
         <Image src={Star} alt="" />

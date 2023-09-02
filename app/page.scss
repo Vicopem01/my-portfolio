@@ -49,13 +49,13 @@
   }
 }
 .custom-images {
-  svg {
-    max-width: 25%;
-    height: auto;
-  }
   img {
-    max-width: 16%;
+    max-width: 20%;
     animation: rotation 3s infinite linear;
     height: auto;
+  }
+  .shaping-img img {
+    animation: none;
+    max-width: 75% !important;
   }
 }

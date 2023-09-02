@@ -26,15 +26,15 @@ const Stacks = () => {
         },
         {
           header: "Frameworks",
-          language: "Express, Nest Js",
+          language: "Express JS, Nest JS",
         },
         {
           header: "Databases",
-          language: "NoSQL Database, Realtime Database",
+          language: "MySQL, MongoDB, Firebase Realtime Database",
         },
         {
           header: "APIS",
-          language: "REST Api, GraphQL, Websocket (Socket.IO)",
+          language: "REST Api, GraphQL, Websocket",
         },
       ],
     },
