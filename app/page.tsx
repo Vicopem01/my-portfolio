@@ -20,9 +20,10 @@ const Landing = () => {
       </div>
       <div className="container">
         <h1 className="text-5xl text-center px-2 lg:w-10/12 mx-auto font-gilroybold xl:text-9xl lg:text-7xl">
-          I&#39;m Victor Ogunjobi 🤗 <br />A full stack developer.
+          I&#39;m Victor Ogunjobi 🤗 <br />A software developer,
+          <br /> and full stack engineer.
         </h1>
-        <p className="lg:w-9/12 text-center mx-auto pt-8">
+        <p className="lg:w-9/12 text-center mx-auto pt-8 text-lg">
           Passionate about high quality solutions for clients, coding to solve a
           problem by doing something better, faster, or easier. I ensure the
           product is involved in a process of continuous improvement and

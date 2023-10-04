@@ -22,7 +22,7 @@ const Stacks = () => {
       history: [
         {
           header: "Languages",
-          language: "JavaScript, TypeScript",
+          language: "JavaScript, TypeScript, Python",
         },
         {
           header: "Frameworks",
