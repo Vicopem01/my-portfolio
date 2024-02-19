@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 const Projects = () => {
   return (
-    <main className="p-4 md:p-8 h-[81vh] overflow-scroll">
+    <main className="p-4 md:p-8 h-[81vh] overflow-scroll mx-auto max-w-[1240px]">
       <h3 className="text-3xl md:text-6xl font-bold mb-4">Previous Projects</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 jusitfy-center items-center">
         {data.map((card: any, index: number) => (
