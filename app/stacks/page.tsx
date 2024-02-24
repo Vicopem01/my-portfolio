@@ -1,36 +1,36 @@
 const Stacks = () => {
   const WORK_EXPERIENCE = [
+    // {
+    //   title: "FRONTEND STACKS",
+    //   history: [
+    //     {
+    //       header: "Languages",
+    //       language: "JavaScript, TypeScript",
+    //     },
+    //     {
+    //       header: "Styling",
+    //       language: "Tailwind, SCSS, SASS, CSS Modules",
+    //     },
+    //   ],
+    // },
     {
-      title: "FRONTEND STACKS",
+      title: "STACKS",
       history: [
         {
           header: "Languages",
-          language: "JavaScript, TypeScript",
+          language: "JavaScript, TypeScript, Python, GoLang",
         },
         {
-          header: "Frameworks",
+          header: "Frontend Frameworks",
           language: "ReactJS, Next JS",
         },
         {
-          header: "Styling",
-          language: "Tailwind, SCSS, SASS, CSS Modules",
-        },
-      ],
-    },
-    {
-      title: "BACKEND STACKS",
-      history: [
-        {
-          header: "Languages",
-          language: "JavaScript, TypeScript, Python",
-        },
-        {
-          header: "Frameworks",
-          language: "Express JS, Nest JS",
+          header: "Backend Frameworks",
+          language: "Express JS, Nest JS, Flask, Apollo GraphQL",
         },
         {
           header: "Databases",
-          language: "MySQL, MongoDB, Firebase Realtime Database",
+          language: "MySQL, MongoDB, Redis, Firebase",
         },
         {
           header: "APIS",
@@ -39,11 +39,15 @@ const Stacks = () => {
       ],
     },
     {
-      title: "OTHERS",
+      title: "MORE STACKS",
       history: [
         {
           header: "Devops",
           language: "AWS Cloud, C-PANEL, Google Cloud Platform",
+        },
+        {
+          header: "Machine Learning",
+          language: "TensorFlow, NumPy, NLTK",
         },
         {
           header: "Version Control",
@@ -51,7 +55,7 @@ const Stacks = () => {
         },
         {
           header: "Others",
-          language: "Solidity, Python, Ether JS, GoLang(Basic)",
+          language: "Solidity, Ether JS",
         },
       ],
     },
@@ -60,11 +64,11 @@ const Stacks = () => {
   return (
     <div className="p-6 md:p-12" data-aos="fade-up">
       <h3 className="text-3xl md:text-6xl font-bold mb-4">Tech Stack</h3>
-      <div className="flex justify-center flex-col lg:flex-row items-start gap-s3">
+      <div className="flex justify-center items-center lg:items-start flex-col lg:flex-row items-start gap-s3">
         {WORK_EXPERIENCE.map((work, index: number) => (
           <div
             key={index}
-            className={`shadow rounded-bl-none rounded-br-none rounded-tl-[20px] rounded-tr-[20px] p-6 w-full mx-5 lg:w-1/3 shadow`}
+            className={`shadow rounded-bl-none rounded-br-none rounded-tl-[20px] rounded-tr-[20px] p-6 w-full mx-5 lg:w-1/2 shadow`}
           >
             <p className="text-lg underline font-semibold mb-4">{work.title}</p>
             {work.history.map((history, index) => (

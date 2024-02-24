@@ -5,7 +5,7 @@ import Text from "@/public/svgs/text.svg";
 
 const Landing = () => {
   return (
-    <main className="relative py-16 main font-gilroymedium dark:text-white text-black">
+    <main className="relative md:py-16 py-10 main font-gilroymedium dark:text-white text-black">
       <div className="block md:hidden flex justify-between items-center custom-images my-12 mx-8">
         <span className="dark:invert-0 invert shaping-img">
           <Image src={Text} alt="" />
@@ -20,15 +20,18 @@ const Landing = () => {
       </div>
       <div className="container">
         <h1 className="text-5xl text-center px-2 lg:w-10/12 mx-auto font-gilroybold xl:text-9xl lg:text-7xl">
-          I&#39;m Victor Ogunjobi 🤗 <br />A software developer,
-          <br /> and full stack engineer.
+          I&#39;m Victor Ogunjobi 🤗
         </h1>
-        <p className="lg:w-9/12 text-center mx-auto pt-8 text-lg">
-          Passionate about high quality solutions for clients, coding to solve a
-          problem by doing something better, faster, or easier. I ensure the
-          product is involved in a process of continuous improvement and
-          refinement to ensure that it is functioning at the highest level
-          possible and achieving maximum client satisfaction.
+        <div className="block lg:text-2xl text-lg font-bold lg:my-14 my-8  text-center">
+          <p>
+            - Software Engineer <br /> - Full Stack Developer <br />- Machine
+            Learning Engineer
+          </p>
+        </div>
+        <p className="lg:w-9/12 text-center mx-auto text-base lg:text-xl">
+          A seasoned software developer and AI enthusiast specializing in
+          machine learning, frontend development, backend systems, and devops.
+          Making an impact, one code at a time
         </p>
       </div>
       <div className="absolute text2 dark:invert-0 invert">
