@@ -5,6 +5,16 @@ import Dock from "@/components/Dock/dock";
 import { ThemeContext } from "@/context";
 import React, { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import Hotjar from "@hotjar/browser";
+
+/**
+ * setup for hotjar.js
+ * track user engagement across site
+ * track user key compoents
+ */
+const siteId = 5162682;
+const hotjarVersion = 6;
+Hotjar.init(siteId, hotjarVersion);
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   let storedTheme;
