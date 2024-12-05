@@ -3,18 +3,18 @@
 import "./globals.css";
 import Dock from "@/components/Dock/dock";
 import { ThemeContext } from "@/context";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import Hotjar from "@hotjar/browser";
+import Clarity from "@microsoft/clarity";
 
 /**
- * setup for hotjar.js
+ * setup for Microsoft Clarity
  * track user engagement across site
- * track user key compoents
+ * track user key engagement
+ * track user page visits
  */
-const siteId = 5162682;
-const hotjarVersion = 6;
-Hotjar.init(siteId, hotjarVersion);
+const projectId: string = process.env.NEXT_PUBLIC_CLARITY_ID || "";
+Clarity.init(projectId);
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   let storedTheme;
