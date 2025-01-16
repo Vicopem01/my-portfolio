@@ -5,9 +5,11 @@ import Image from "next/image";
 import { Dark, dockLinks } from "@/constant";
 import Link from "next/link";
 import Avatar from "@/public/images/Dock/avatar.png";
+import { useRouter } from "next/navigation";
 
 const DesktopDock = () => {
   const { theme, setTheme } = useContext(ThemeContext);
+  const { push } = useRouter();
 
   const handleClick = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -17,7 +19,7 @@ const DesktopDock = () => {
     <div
       className={`fixed left-1/2 -translate-x-1/2 bottom-0 dock-hover bg-[rgba(0,0,0,0.83)] dark:bg-[rgba(114,114,114,0.17)] hidden md:flex`}
     >
-      <div className="circle">
+      <div className="circle" onClick={() => push("/")}>
         <Image src={Avatar} alt="avatar" />
       </div>
       <span className="line"></span>

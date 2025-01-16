@@ -7,6 +7,13 @@ import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Clarity from "@microsoft/clarity";
 
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+
 /**
  * setup for Microsoft Clarity
  * track user engagement across site
@@ -39,7 +46,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           content="Full stack developer ~ Web and blockchain security enthusiast"
         />
       </head>
-      <body className="transition-300 relative m-0 min-h-screen bg-white dark:bg-black dark:text-white text-black font-gilroymedium">
+      <body
+        className={`${montserrat.className} m-horizontal transition-300 relative min-h-screen bg-white dark:bg-black dark:text-white text-black`}
+      >
         <ThemeContext.Provider value={{ theme, setTheme }}>
           {children}
           <Dock />

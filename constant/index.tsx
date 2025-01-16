@@ -15,30 +15,30 @@ import GitHub from "@/public/images/Dock/github-dark.png";
 export const data = [
   {
     heading:
-      "AVIEW works with the top translators and voiceover talent so that you can quickly grow your international influence, A-View at a time.",
+      "Aview works with the top translators and voiceover talent so that you can quickly grow your international influence, A-View at a time.",
     img: Aview,
-    skills: "Next JS • Node JS • AWS • Tailwind • Firebase",
+    skills: "Next JS • Node JS • AWS • Redis • Firebase • Python",
     link: "https://aviewint.com",
   },
   {
     heading:
       "COVA gives you control of your wealth and ensures your assets never become unclaimed assets in the event of an eventuality.",
     img: Cova,
-    skills: "React • TypeScript • GraphQL • SCSS",
+    skills: "React • TypeScript • GraphQL • SCSS • NestJS • AWS",
     link: "https://getcova.com",
   },
   {
     heading:
       "A complete feature - rich payment solution for both offline and online acquiring",
     img: SaySwitch,
-    skills: "Next JS • Node JS • Tailwind",
+    skills: "Next JS • Node JS • Tailwind • MySQL",
     link: "https://www.sayswitchgroup.com",
   },
   {
     heading:
       "Grow your business, D-LHS will take care of your Logistics and Haulage",
     img: DLHS,
-    skills: "Next JS • Javascript • Tailwind",
+    skills: "Next JS • Javascript • Tailwind • ExpressJS",
     link: "https://d-lhs.co",
   },
   {

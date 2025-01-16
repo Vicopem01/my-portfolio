@@ -1,18 +1,5 @@
 const Stacks = () => {
   const WORK_EXPERIENCE = [
-    // {
-    //   title: "FRONTEND STACKS",
-    //   history: [
-    //     {
-    //       header: "Languages",
-    //       language: "JavaScript, TypeScript",
-    //     },
-    //     {
-    //       header: "Styling",
-    //       language: "Tailwind, SCSS, SASS, CSS Modules",
-    //     },
-    //   ],
-    // },
     {
       title: "STACKS",
       history: [
@@ -22,15 +9,15 @@ const Stacks = () => {
         },
         {
           header: "Frontend Frameworks",
-          language: "ReactJS, Next JS",
+          language: "React JS, Next JS, Angular JS",
         },
         {
           header: "Backend Frameworks",
-          language: "Express JS, Nest JS, Flask, Apollo GraphQL",
+          language: "Express JS, Nest JS, Flask, Django, Apollo GraphQL",
         },
         {
           header: "Databases",
-          language: "MySQL, MongoDB, Redis, Firebase",
+          language: "MySQL, MongoDB, Redis, Firebase, DynamoDB",
         },
         {
           header: "APIS",
@@ -64,7 +51,7 @@ const Stacks = () => {
   return (
     <div className="p-6 md:p-12" data-aos="fade-up">
       <h3 className="text-3xl md:text-6xl font-bold mb-4">Tech Stack</h3>
-      <div className="flex justify-center items-center lg:items-start flex-col lg:flex-row items-start gap-s3">
+      <div className="flex justify-center lg:items-start flex-col lg:flex-row items-start gap-s3">
         {WORK_EXPERIENCE.map((work, index: number) => (
           <div
             key={index}

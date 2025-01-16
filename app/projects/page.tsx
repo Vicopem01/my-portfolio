@@ -4,20 +4,32 @@ import Button from "@/components/Button";
 
 const Projects = () => {
   return (
-    <main className="p-4 md:p-8 h-[81vh] overflow-scroll mx-auto max-w-[1240px]">
+    <main className="p-4 md:p-8 h-[85vh] overflow-scroll mx-auto max-w-[1240px]">
       <h3 className="text-3xl md:text-6xl font-bold mb-4">Previous Projects</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 jusitfy-center items-center">
-        {data.map((card: any, index: number) => (
-          <div className="block md:m-4 m-2 px-4 py-8 border" key={index}>
-            <div className="flex flex-col justify-start w-full">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 jusitfy-center items-stretch">
+        {data.map((card: any, i: number) => (
+          <a
+            className={`group/button block w-full h-full border rounded md:m-4 m-2 px-4 py-8`}
+            href={card.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={i}
+          >
+            <div className=" w-full">
               <p className="mb-4 h-[5rem] text-sm md:text-base">
                 {card.heading}
               </p>
-              <Image src={card.img} alt="" className="md:h-[210px] w-full" />
-              <p className="text-xs my-2">{card.skills}</p>
-              <Button text="Visit Site" href={card.link} />
+              <Image
+                src={card.img}
+                alt=""
+                className="h-auto max-w-full object-contain"
+              />
+              <p className="text-sm my-8 text-center font-medium">
+                {card.skills}
+              </p>
+              <Button text="Visit Site" />
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </main>

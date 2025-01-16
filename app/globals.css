@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "gilroy-medium";
-  src: url("../public/gilroy_font/Gilroy-Regular.otf");
-}
-
-@font-face {
-  font-family: "gilroy-bold";
-  src: url("../public/gilroy_font/Gilroy-Bold.otf");
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -33,5 +23,9 @@
       rgba(255, 255, 255, 0.1) 0%,
       rgba(255, 255, 255, 0) 100%
     );
+  }
+
+  .m-horizontal {
+    @apply mx-auto w-[90%] max-w-[1240px];
   }
 }

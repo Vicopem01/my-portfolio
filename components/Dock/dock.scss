@@ -27,12 +27,12 @@
       font-size: 12px;
       width: 100px;
       text-align: center;
-      font-family: gilroy-bold;
     }
   }
 }
 
 .circle {
+  cursor: pointer;
   border: 5px solid rgba(255, 255, 255, 0.27);
   border-radius: 50%;
   width: 80px;
