@@ -36,7 +36,7 @@ const Landing = () => {
 
       <div>
         <p className="text-center mt-12 text-base lg:text-lg">
-          Batman with a Green Lantern's ring
+          Batman with a Green Lantern&#39;s ring
         </p>
         <div className="absolute text2 dark:invert-0 invert">
           <Image src={Text} alt="" width={120} height={70} />
