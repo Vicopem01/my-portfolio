@@ -1,19 +1,28 @@
 "use client";
 
 import "./globals.css";
-import Dock from "@/components/Dock/dock";
+// import Dock from "@/components/Dock/dock";
 import { ThemeContext } from "@/context";
 import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Clarity from "@microsoft/clarity";
 
-import { Montserrat } from "next/font/google";
+import { Montserrat, Oswald, Six_Caps } from "next/font/google";
 
-const montserrat = Montserrat({
-  weight: ["300", "400", "500", "600", "700"],
+// const montserrat = Montserrat({
+//   weight: ["300", "400", "500", "600", "700"],
+//   subsets: ["latin"],
+// });
+
+export const sixCaps = Six_Caps({
+  weight: ["400"],
   subsets: ["latin"],
 });
 
+const oswald = Oswald({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 /**
  * setup for Microsoft Clarity
  * track user engagement across site
@@ -47,11 +56,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body
-        className={`${montserrat.className} m-horizontal transition-300 relative min-h-screen bg-white dark:bg-black dark:text-white text-black`}
+        className={`${oswald.className} transition-300 relative min-h-screen bg-white dark:bg-black dark:text-white text-black`}
       >
         <ThemeContext.Provider value={{ theme, setTheme }}>
           {children}
-          <Dock />
         </ThemeContext.Provider>
         <Analytics />
       </body>

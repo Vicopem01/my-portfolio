@@ -48,3 +48,26 @@
     max-width: 75% !important;
   }
 }
+
+@keyframes increaseHeight {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.letter-animate {
+  transition: transform 0.2s ease-out;
+}
+
+.letter-animate.hovered {
+  animation: increaseHeight 0.3s ease-out;
+  transform: translateY(
+    -5px
+  ); // Keep a slight lift while hovered after animation
+}
