@@ -15,9 +15,11 @@ module.exports = {
       xl: ["21px", { lineHeight: "28px" }],
       "2xl": ["24px", { lineHeight: "30px" }],
       "3xl": ["26px", { lineHeight: "32px" }],
+      "4xl": ["30px", { lineHeight: "36px" }],
+      "5xl": ["32px", { lineHeight: "40px" }],
       "6xl": ["36px", { lineHeight: "45px" }],
       "7xl": ["48px", { lineHeight: "60px" }],
-      xxl: ["102px", { lineHeight: "81px" }],
+      xxl: ["350px"],
     },
     screens: {
       "2xs": "360px",
