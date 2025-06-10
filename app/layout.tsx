@@ -7,17 +7,12 @@ import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Clarity from "@microsoft/clarity";
 
-import { Montserrat, Oswald, Six_Caps } from "next/font/google";
+import { Oswald } from "next/font/google";
 
 // const montserrat = Montserrat({
 //   weight: ["300", "400", "500", "600", "700"],
 //   subsets: ["latin"],
 // });
-
-export const sixCaps = Six_Caps({
-  weight: ["400"],
-  subsets: ["latin"],
-});
 
 const oswald = Oswald({
   weight: ["300", "400", "500", "600", "700"],

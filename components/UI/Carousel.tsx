@@ -86,7 +86,6 @@ const Slide = ({ img, alt, index, current, handleSlideClick }: SlideProps) => {
             src={img}
             loading="eager"
             decoding="sync"
-            layout="fill"
           />
         </div>
       </li>

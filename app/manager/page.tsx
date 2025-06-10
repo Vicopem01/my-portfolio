@@ -149,7 +149,7 @@ const ProductManager = () => {
       </h3>
       <div className="flex flex-wrap items-center justify-around w-11/12 mx-auto gap-4 p-4">
         {MANAGER_TECHNOLOGIES.map((tech, index) => (
-          <img
+          <Image
             key={index}
             src={tech.src}
             alt={tech.alt}

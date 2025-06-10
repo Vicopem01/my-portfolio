@@ -9,50 +9,50 @@ import LinkedIn from "@/public/images/Dock/linkedIn.svg";
 import Mail from "@/public/images/Dock/mail.svg";
 import GitHub from "@/public/images/Dock/github.png";
 
-export const data = [
-  // {
-  //   heading:
-  //     "Aview works with the top translators and voiceover talent so that you can quickly grow your international influence, A-View at a time.",
-  //   img: Aview,
-  //   skills: "Next JS • Node JS • AWS • Redis • Firebase • Python",
-  //   link: "https://aviewint.com",
-  // },
-  {
-    heading:
-      "COVA gives you control of your wealth and ensures your assets never become unclaimed assets in the event of an eventuality.",
-    img: Cova,
-    skills: "React • TypeScript • GraphQL • SCSS • NestJS • AWS",
-    link: "https://getcova.com",
-  },
-  // {
-  //   heading:
-  //     "A complete feature - rich payment solution for both offline and online acquiring",
-  //   img: SaySwitch,
-  //   skills: "Next JS • Node JS • Tailwind • MySQL",
-  //   link: "https://www.sayswitchgroup.com",
-  // },
-  // {
-  //   heading:
-  //     "Grow your business, D-LHS will take care of your Logistics and Haulage",
-  //   img: DLHS,
-  //   skills: "Next JS • Javascript • Tailwind • ExpressJS",
-  //   link: "https://d-lhs.co",
-  // },
-  {
-    heading:
-      "Spaceet provides a seamless user experience for apartment listing and short let bookings.",
-    img: Spaceet,
-    skills: "React JS • Node JS • CSS",
-    link: "https://spaceet.com",
-  },
-  {
-    heading:
-      "Designing a parcel delivery experience for a Nigeria based company",
-    img: Godan,
-    skills: "Next JS • Firebase • Tailwind",
-    link: "https://www.figma.com/file/LWFK2EBSjdCbCZfXg3ciV7/GoDan?type=design&node-id=0-1&t=6AOJXO1ZlM2HgUfN-0",
-  },
-];
+// export const data = [
+//   // {
+//   //   heading:
+//   //     "Aview works with the top translators and voiceover talent so that you can quickly grow your international influence, A-View at a time.",
+//   //   img: Aview,
+//   //   skills: "Next JS • Node JS • AWS • Redis • Firebase • Python",
+//   //   link: "https://aviewint.com",
+//   // },
+//   {
+//     heading:
+//       "COVA gives you control of your wealth and ensures your assets never become unclaimed assets in the event of an eventuality.",
+//     img: Cova,
+//     skills: "React • TypeScript • GraphQL • SCSS • NestJS • AWS",
+//     link: "https://getcova.com",
+//   },
+//   // {
+//   //   heading:
+//   //     "A complete feature - rich payment solution for both offline and online acquiring",
+//   //   img: SaySwitch,
+//   //   skills: "Next JS • Node JS • Tailwind • MySQL",
+//   //   link: "https://www.sayswitchgroup.com",
+//   // },
+//   // {
+//   //   heading:
+//   //     "Grow your business, D-LHS will take care of your Logistics and Haulage",
+//   //   img: DLHS,
+//   //   skills: "Next JS • Javascript • Tailwind • ExpressJS",
+//   //   link: "https://d-lhs.co",
+//   // },
+//   {
+//     heading:
+//       "Spaceet provides a seamless user experience for apartment listing and short let bookings.",
+//     img: Spaceet,
+//     skills: "React JS • Node JS • CSS",
+//     link: "https://spaceet.com",
+//   },
+//   {
+//     heading:
+//       "Designing a parcel delivery experience for a Nigeria based company",
+//     img: Godan,
+//     skills: "Next JS • Firebase • Tailwind",
+//     link: "https://www.figma.com/file/LWFK2EBSjdCbCZfXg3ciV7/GoDan?type=design&node-id=0-1&t=6AOJXO1ZlM2HgUfN-0",
+//   },
+// ];
 
 export const Dark = () => (
   <svg

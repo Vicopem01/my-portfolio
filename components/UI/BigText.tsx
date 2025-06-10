@@ -1,4 +1,4 @@
-import { sixCaps } from "@/app/layout";
+import { sixCaps } from "@/utils/fonts";
 
 interface BigTextProps {
   ref: React.Ref<HTMLHeadingElement>;

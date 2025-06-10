@@ -3,7 +3,6 @@ import "./page.scss";
 import { dockLinks } from "@/constant";
 import React, { useState, useRef } from "react";
 import { BackgroundBeams } from "@/components/UI/BackgroundBeam";
-import { sixCaps } from "./layout";
 import { AnimatedTooltip } from "@/components/UI/Tooltip";
 import BigText from "@/components/UI/BigText";
 import { AnimatedModalDemo } from "@/components/UI/PortfolioOptions";
