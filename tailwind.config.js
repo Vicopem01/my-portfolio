@@ -18,8 +18,9 @@ module.exports = {
       "4xl": ["30px", { lineHeight: "36px" }],
       "5xl": ["32px", { lineHeight: "40px" }],
       "6xl": ["36px", { lineHeight: "45px" }],
-      "7xl": ["48px", { lineHeight: "60px" }],
-      xxl: ["350px"],
+      phone: ["80px"],
+      tab: ["168px"],
+      desktop: ["300px"],
     },
     screens: {
       "2xs": "360px",

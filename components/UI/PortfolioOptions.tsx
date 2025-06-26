@@ -40,7 +40,7 @@ export function AnimatedModalDemo() {
         <ModalTrigger />
 
         <ModalBody>
-          <ModalContent className="flex flex-col justify-around items-center flex-1 p-8 md:p-10 text-6xl">
+          <ModalContent className="flex flex-col justify-around items-center flex-1 p-8 md:p-10 text-3xl md:text-6xl">
             <LinkButton text="FULL STACK DEVELOPER" href="/developer" />
             <LinkButton text="PRODUCT MANAGER" href="/manager" />
             <LinkButton text="DEVOPS ENGINEER" href="/devops" />

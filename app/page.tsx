@@ -74,14 +74,14 @@ const Landing = () => {
         <BigText ref={nameRef} hoveredIndex={hoveredIndex} />
         <AnimatedModalDemo />
 
-        <div className="fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center justify-between w-4/10 px-4 py-2">
+        <div className="fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center justify-between max-w-4/10 min-w-[200px] px-4 py-2">
           {dockLinks.map((link, index: number) => (
             <a
               href={link.to}
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="mx-5"
+              className="mx-5 w-10 h-10"
             >
               <AnimatedTooltip
                 name={link.text}
