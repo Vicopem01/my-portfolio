@@ -6,4 +6,4 @@
 - A brief summary of me
 - Other relevant websites about me
 
-#### Checkout out the live version [here](https://victhedev.com/)
+#### Checkout out the live version [here](https://vicopem.com/)

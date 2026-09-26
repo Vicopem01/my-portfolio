@@ -5,7 +5,7 @@
 `my-portfolio` is the personal portfolio website of Victor Ogunjobi, a full-stack
 software developer. It is a single-page-app-style marketing/portfolio site
 showcasing past projects, tech stacks, and professional background. The live
-version is hosted at https://victhedev.com/ (repository:
+version is hosted at https://vicopem.com/ (repository:
 https://github.com/Vicopem01/my-portfolio).
 
 The site presents the owner in several professional roles via separate pages
@@ -104,8 +104,25 @@ manually with `npm run dev` and `npm run build`.
 
 ## Deployment
 
-Deployed on Vercel (implied by `@vercel/analytics` and the standard Next.js
-setup). No CI/CD configuration files are present in the repo.
+Deployed to **Cloudflare** as a fully static site: `next.config.js` sets
+`output: "export"`, so `next build` emits a plain `out/` directory (all routes
+are prerendered; there is no server runtime). `wrangler.jsonc` declares `out/`
+as static assets — its presence prevents Cloudflare's connected-build flow from
+auto-detecting Next.js and attempting an OpenNext/Workers build. Cloudflare
+build settings: command `npm run build`, deploy command `npx wrangler deploy`,
+no framework preset.
+
+Notes:
+
+- `images.unoptimized: true` is required for static export — `next/image` does
+  no on-the-fly optimization. Source images are kept full-resolution and were
+  losslessly compressed in place; keep them reasonably sized when adding new
+  ones.
+- `npm run start` does **not** serve the export; preview locally with a static
+  server, e.g. `npx serve out` or `python3 -m http.server -d out`.
+- `NEXT_PUBLIC_CLARITY_ID` must be set in the Cloudflare Pages environment if
+  analytics are wanted.
+- No CI/CD configuration files are present in the repo.
 
 ## Security considerations
 
