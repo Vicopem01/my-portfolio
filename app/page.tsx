@@ -5,7 +5,6 @@ import React, { useState, useRef } from "react";
 import { BackgroundBeams } from "@/components/UI/BackgroundBeam";
 import { AnimatedTooltip } from "@/components/UI/Tooltip";
 import BigText from "@/components/UI/BigText";
-// import { AnimatedModalDemo } from "@/components/UI/PortfolioOptions";
 import { instrumentSerif, sixCaps } from "@/utils/fonts";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";

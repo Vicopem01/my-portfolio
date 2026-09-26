@@ -48,35 +48,32 @@ string in `app/layout.tsx`).
   - `app/layout.tsx` — **client component** ("use client") root layout; sets up
     the dark/light theme via `ThemeContext` + `localStorage` (`theme` key,
     `dark` class on `<html>`), initializes Clarity and Vercel Analytics, loads
-    the Oswald font. Contains the `<title>`/meta in a manual `<head>`.
-  - `app/page.tsx` — landing page: interactive big-name hero (`BigText`),
-    portfolio-role modal (`PortfolioOptions`), dock links (`dockLinks` from
-    `constant/`), custom cursor, `BackgroundBeams`.
+    the Inter (body) and Oswald (display) fonts, and mounts the global
+    `CustomCursor` and `ThemeToggle`. Contains the `<title>`/meta in a manual
+    `<head>`.
+  - `app/page.tsx` — scrollable landing page: interactive big-name hero
+    (`BigText`), tagline, marquee strip, proof-stat strip, selected projects,
+    role links, and a contact footer with `dockLinks` from `constant/`.
   - `app/developer/page.tsx`, `app/manager/page.tsx`, `app/devops/page.tsx`,
     `app/founder/page.tsx` — role pages built around the `Timeline` component
     and `Carousel` with images imported from `public/images/Projects/`.
-  - `app/stacks/page.tsx` — tech-stack listing page (data defined inline in the
-    page component).
-  - `app/not-found.tsx` — 404 page that immediately redirects (`router.replace`)
-    to `/`.
-  - `app/_app.tsx` — legacy pages-router style file; **unused** by the App Router.
+  - `app/stacks/page.tsx` — tech-stack listing page, grouped by role with data
+    from `constant/`.
 - `components/UI/` — reusable presentational components, mostly adapted from
-  Aceternity UI / shadcn patterns: `AnimatedModal`, `PortfolioOptions`,
-  `Tooltip` (AnimatedTooltip), `timeline`, `BigText`, `BackgroundBeam`,
-  `Button`, `Carousel`.
-- `components/Dock/` — dock navigation (`dock.tsx` composes `mobile.tsx` and
-  `desktop.tsx`, styles in `dock.scss`). Currently **commented out** of
-  `app/layout.tsx`.
+  Aceternity UI / shadcn patterns: `Tooltip` (AnimatedTooltip), `timeline`,
+  `BigText`, `BackgroundBeam`, `Carousel`, plus custom `CustomCursor`,
+  `ThemeToggle`, and `TerminalCard` (used by the DevOps page).
 - `constant/index.tsx` — shared static data: `dockLinks` (GitHub/LinkedIn/Email),
-  `TECHNOLOGIES` (shields.io badge list), inline SVG icon components. Large
-  blocks of legacy data are commented out — this file doubles as a scratchpad.
+  `TECHNOLOGIES`/`DEVOPS_TECHNOLOGIES`/`MANAGER_TECHNOLOGIES` badge lists used
+  by `app/stacks/`, inline SVG icon components. Large blocks of legacy data are
+  commented out — this file doubles as a scratchpad.
 - `context/index.tsx` — `ThemeContext` (theme + setTheme).
 - `lib/utils.ts` — `cn()` helper (`clsx` + `tailwind-merge`), the standard
   shadcn utility.
-- `utils/fonts.ts` — additional `next/font` definitions (Six Caps).
+- `utils/fonts.ts` — additional `next/font` definitions (Six Caps,
+  Instrument Serif italic, IBM Plex Mono).
 - `public/images/` — static assets: `Projects/` (per-project screenshots),
-  `Dock/` (icons), `Landing/`; `public/svgs/` — SVG assets.
-- `.d.ts` — module declaration for `react-outside-click-handler`.
+  `Dock/` (icons); `public/svgs/` — SVG assets.
 - `Victor Ogunjobi - Resume.pdf` — resume stored at repo root (not served from
   `public/`).
 
@@ -87,8 +84,10 @@ string in `app/layout.tsx`).
 - Client-side interactivity is heavy: most components and even the root layout
   use `"use client"`. Pages import `next/image` and `next/link`.
 - Styling is primarily Tailwind utility classes with `dark:` variants
-  (dark mode via `class` strategy); SCSS partials for the landing page and
-  dock. Custom Tailwind theme in `tailwind.config.js` (font sizes, screens).
+  (dark mode via `class` strategy); one SCSS partial for the landing page
+  (`app/page.scss`). Custom Tailwind theme in `tailwind.config.js` (font
+  families — Inter body / Oswald display, font sizes, screens, teal `accent`
+  color driven by the `--accent` CSS variable in `app/globals.css`).
 - Components in `components/UI/` follow the shadcn/Aceternity UI convention
   (self-contained, copy-in components using `cn()` from `lib/utils`).
 - Data is often defined inline in page components or in `constant/index.tsx`

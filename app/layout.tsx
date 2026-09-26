@@ -1,7 +1,6 @@
 "use client";
 
 import "./globals.css";
-// import Dock from "@/components/Dock/dock";
 import { ThemeContext } from "@/context";
 import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
