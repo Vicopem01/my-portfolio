@@ -1,73 +1,78 @@
-const Stacks = () => {
-  const WORK_EXPERIENCE = [
-    {
-      title: "STACKS",
-      history: [
-        {
-          header: "Languages",
-          language: "JavaScript, TypeScript, Python, GoLang",
-        },
-        {
-          header: "Frontend Frameworks",
-          language: "React JS, Next JS, Angular JS",
-        },
-        {
-          header: "Backend Frameworks",
-          language: "Express JS, Nest JS, Flask, Django, Apollo GraphQL",
-        },
-        {
-          header: "Databases",
-          language: "MySQL, MongoDB, Redis, Firebase, DynamoDB",
-        },
-        {
-          header: "APIS",
-          language: "REST Api, GraphQL, Websocket",
-        },
-      ],
-    },
-    {
-      title: "MORE STACKS",
-      history: [
-        {
-          header: "Devops",
-          language: "AWS Cloud, C-PANEL, Google Cloud Platform",
-        },
-        {
-          header: "Machine Learning",
-          language: "TensorFlow, NumPy, NLTK",
-        },
-        {
-          header: "Version Control",
-          language: "Git, GitHub, GitLab",
-        },
-        {
-          header: "Others",
-          language: "Solidity, Ether JS",
-        },
-      ],
-    },
-  ];
+import Link from "next/link";
+import Image from "next/image";
+import Back from "@/public/svgs/exit.svg";
+import {
+  TECHNOLOGIES,
+  DEVOPS_TECHNOLOGIES,
+  MANAGER_TECHNOLOGIES,
+} from "@/constant";
+import { instrumentSerif } from "@/utils/fonts";
 
+const GROUPS = [
+  { index: "01", title: "Full-Stack Developer", href: "/developer", items: TECHNOLOGIES },
+  { index: "02", title: "DevOps & Cloud Architect", href: "/devops", items: DEVOPS_TECHNOLOGIES },
+  { index: "03", title: "Product Manager", href: "/manager", items: MANAGER_TECHNOLOGIES },
+];
+
+const Stacks = () => {
   return (
-    <div className="p-6 md:p-12" data-aos="fade-up">
-      <h3 className="text-3xl md:text-6xl font-bold mb-4">Tech Stack</h3>
-      <div className="flex justify-center lg:items-start flex-col lg:flex-row items-start gap-s3">
-        {WORK_EXPERIENCE.map((work, index: number) => (
-          <div
-            key={index}
-            className={`shadow rounded-bl-none rounded-br-none rounded-tl-[20px] rounded-tr-[20px] p-6 w-full mx-5 lg:w-1/2 shadow`}
+    <main className="max-w-5xl mx-auto px-6 py-12">
+      <h3 className="font-display">
+        <Link
+          href="/"
+          className="text-xl flex items-center gap-2 hover:underline"
+        >
+          <Image
+            src={Back}
+            alt=""
+            width={30}
+            height={30}
+            className="invert dark:invert-0"
+          />
+          Go Home
+        </Link>
+      </h3>
+
+      <p className="mt-14 text-sm uppercase tracking-[0.3em] text-accent">
+        Tools of the trade
+      </p>
+      <h2 className="font-display text-4xl md:text-6xl mt-2">
+        Tech{" "}
+        <span className={`${instrumentSerif.className} text-accent`}>
+          stack
+        </span>
+      </h2>
+
+      <div className="mt-12">
+        {GROUPS.map((group) => (
+          <section
+            key={group.index}
+            className="border-t border-neutral-200 dark:border-neutral-800 py-8"
           >
-            <p className="text-lg underline font-semibold mb-4">{work.title}</p>
-            {work.history.map((history, index) => (
-              <div key={`history-${index}`}>
-                <p className="text-lg my-2">{history.header}</p>
-                <p className="pl-5 mt-2 mb-10">{history.language}</p>
-              </div>
-            ))}
-          </div>
+            <Link href={group.href} className="group flex items-baseline gap-4">
+              <span className="text-sm font-medium tracking-widest text-accent">
+                {group.index}
+              </span>
+              <span
+                className={`text-2xl md:text-3xl font-medium transition-colors group-hover:text-accent ${instrumentSerif.className} group-hover:italic`}
+              >
+                {group.title}
+              </span>
+            </Link>
+            <div className="flex flex-wrap gap-2 mt-5">
+              {group.items.map((tech) => (
+                <span
+                  key={tech.name}
+                  className="rounded-full border border-neutral-300 dark:border-neutral-700 px-4 py-1.5 text-sm text-neutral-700 dark:text-neutral-300"
+                >
+                  {tech.name}
+                </span>
+              ))}
+            </div>
+          </section>
         ))}
       </div>
-    </div>
+    </main>
   );
 };
 

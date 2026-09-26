@@ -25,9 +25,88 @@ import Carousel from "@/components/UI/Carousel";
 import Link from "next/link";
 import Image from "next/image";
 import Back from "@/public/svgs/exit.svg";
-import { MANAGER_TECHNOLOGIES } from "@/constant";
+import { ReactNode } from "react";
+import { instrumentSerif } from "@/utils/fonts";
+
+const Hl = ({ children }: { children: ReactNode }) => (
+  <span className={`${instrumentSerif.className} italic text-accent text-base`}>
+    {children}
+  </span>
+);
 
 const data = [
+  {
+    subTitle: "Present",
+    content: (
+      <div>
+        <p className="text-xl text-neutral-200">
+          Black Founder Network{" "}
+          <span className="text-sm text-accent">Member · Toronto</span>
+        </p>
+        <ul className="text-sm text-neutral-400 space-y-1 list-none mt-2">
+          <li>
+            <span className="text-accent mr-2">—</span>
+            <Hl>Mentoring</Hl> aspiring developers through talks, workshops, and
+            1:1 sessions — from demo apps to scalable product architectures
+          </li>
+          <li>
+            <span className="text-accent mr-2">—</span>Leading{" "}
+            <Hl>MVP design and development</Hl> for early-stage startups,
+            accelerating time-to-market
+          </li>
+          <li>
+            <span className="text-accent mr-2">—</span>Speaking at events
+            championing <Hl>diversity in tech</Hl> and coaching founders on
+            pitch delivery
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    subTitle: "Present",
+    content: (
+      <div>
+        <p className="text-xl text-neutral-200">
+          Innovation Boost Zone{" "}
+          <span className="text-sm text-accent">Member · Toronto</span>
+        </p>
+        <ul className="text-sm text-neutral-400 space-y-1 list-none mt-2">
+          <li>
+            <span className="text-accent mr-2">—</span>Iterating on startup
+            projects — refining <Hl>product ideas, business models</Hl>, and
+            pitches
+          </li>
+          <li>
+            <span className="text-accent mr-2">—</span>Spearheading{" "}
+            <Hl>MVP builds</Hl> so startups can test concepts in the market
+            quickly
+          </li>
+          <li>
+            <span className="text-accent mr-2">—</span>Building community inside
+            the incubator, encouraging idea-sharing across teams
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    subTitle: "2025",
+    content: (
+      <div>
+        <p className="text-xl text-neutral-200">
+          Toronto Metropolitan University{" "}
+          <span className="text-sm text-accent">
+            M.Eng, Engineering Innovation
+          </span>
+        </p>
+        <p className="text-sm my-2 text-neutral-300">
+          Master of <Hl>Engineering Innovation</Hl> (2023 – 2025) — driving team
+          success and pushing innovation from within.
+        </p>
+      </div>
+    ),
+  },
   {
     subTitle: "Late 2023",
     content: (
@@ -48,11 +127,34 @@ const data = [
     subTitle: "2023",
     content: (
       <div>
-        <p className="text-xl text-neutral-200">Aview International</p>
+        <p className="text-xl text-neutral-200">
+          Aview International{" "}
+          <span className="text-sm text-accent">Founding Engineer</span>
+        </p>
         <p className="text-sm my-2 text-neutral-300">
           Aview works with the top translators and voiceover talent so that you
           can quickly grow your international influence, A-View at a time.
         </p>
+        <ul className="text-sm text-neutral-400 space-y-1 list-none">
+          <li>
+            <span className="text-accent mr-2">—</span>Led a team of{" "}
+            <Hl>5 engineers and 6 interns</Hl> across 12 platforms
+          </li>
+          <li>
+            <span className="text-accent mr-2">—</span>Drove a <Hl>12x</Hl>{" "}
+            increase in delivery velocity
+          </li>
+          <li>
+            <span className="text-accent mr-2">—</span>Owned product
+            architecture for a modular media workflow supporting{" "}
+            <Hl>35+ languages</Hl>, cutting turnaround time by <Hl>70%</Hl>
+          </li>
+          <li>
+            <span className="text-accent mr-2">—</span>Automated content
+            pipelines processing <Hl>40K+ profiles/day</Hl>, generating{" "}
+            <Hl>2.5x</Hl> more qualified leads
+          </li>
+        </ul>
 
         <div className="relative overflow-hidden w-full h-full py-20">
           <Carousel
@@ -67,12 +169,31 @@ const data = [
     subTitle: "2022",
     content: (
       <div>
-        <p className="text-xl text-neutral-200">Cova (now called LifeCheck)</p>
+        <p className="text-xl text-neutral-200">
+          Cova (now called LifeCheck){" "}
+          <span className="text-sm text-accent">Full Stack Developer</span>
+        </p>
         <p className="text-sm my-2 text-neutral-300">
           Cova helps you organize all your assets in one place, tracks your net
           worth and securely notify your loved ones in the event of an
           eventuality.
         </p>
+        <ul className="text-sm text-neutral-400 space-y-1 list-none">
+          <li>
+            <span className="text-accent mr-2">—</span>Analyzed{" "}
+            <Hl>usage analytics</Hl> to redesign navigation flows, lowering task
+            completion time
+          </li>
+          <li>
+            <span className="text-accent mr-2">—</span>Ran rapid product
+            iterations on <Hl>real-time user feedback</Hl>, accelerating
+            customer adoption
+          </li>
+          <li>
+            <span className="text-accent mr-2">—</span>Established Git
+            workflows, code reviews, and CI/CD hooks for streamlined releases
+          </li>
+        </ul>
         <div className="relative overflow-hidden w-full h-full py-20">
           <Carousel alt="Cova" slides={[Cova1, Cova2, Cova3, Cova4]} />
         </div>
@@ -103,11 +224,26 @@ const data = [
     subTitle: "Early 2021",
     content: (
       <div>
-        <p className="text-xl text-neutral-200">Spaceet</p>
+        <p className="text-xl text-neutral-200">
+          Spaceet{" "}
+          <span className="text-sm text-accent">Lead Software Developer</span>
+        </p>
         <p className="text-sm my-2 text-neutral-300">
           Home of Luxury and Affordability Apartment, Hosting and Booking, Think
           luxury, Think Spaceet!
         </p>
+        <ul className="text-sm text-neutral-400 space-y-1 list-none">
+          <li>
+            <span className="text-accent mr-2">—</span>Led{" "}
+            <Hl>6 engineers and 3 designers</Hl> across three interconnected
+            platforms (User, Host, Admin)
+          </li>
+          <li>
+            <span className="text-accent mr-2">—</span>Designed{" "}
+            <Hl>UI/UX flows</Hl> with component-driven architecture and
+            continuous feedback loops, improving engagement and retention
+          </li>
+        </ul>
         <div className="relative overflow-hidden w-full h-full py-20">
           <Carousel
             alt="Spaceet"
@@ -131,12 +267,26 @@ const data = [
       </div>
     ),
   },
+  {
+    subTitle: "2020",
+    content: (
+      <div>
+        <p className="text-xl text-neutral-200">
+          Olabisi Onabanjo University{" "}
+          <span className="text-sm text-accent">B.Eng, Mechanical</span>
+        </p>
+        <p className="text-sm my-2 text-neutral-300">
+          Bachelor of Engineering, Mechanical (2015 – 2020) — Ogun, Nigeria.
+        </p>
+      </div>
+    ),
+  },
 ];
 
 const ProductManager = () => {
   return (
     <div className="relative w-full bg-neutral-950">
-      <h3 className="pt-10 text-center md:text-left w-11/12 mx-auto">
+      <h3 className="font-display pt-10 text-center md:text-left w-11/12 mx-auto">
         <Link
           href="/"
           className="text-xl flex items-center gap-2 hover:underline"
@@ -144,26 +294,11 @@ const ProductManager = () => {
           <Image src={Back} alt="" width={30} height={30} />
           Go Home
         </Link>
-        <br />
-        <span className="text-xl font-semibold">💻 Tech Stack:</span>
       </h3>
-      <div className="flex flex-wrap items-center justify-around w-11/12 mx-auto gap-4 p-4">
-        {MANAGER_TECHNOLOGIES.map((tech, index) => (
-          <Image
-            key={index}
-            src={tech.src}
-            alt={tech.alt}
-            width={120}
-            height={60}
-            className="transition-transform hover:scale-125"
-            title={tech.name}
-          />
-        ))}
-      </div>
       <Timeline
         data={data}
-        title="Product Management Timeline"
-        desc="Started as a lead developer and transitioned over time"
+        title="Product & Leadership Timeline"
+        desc="Leading teams, mentoring founders, and shipping products people use"
       />
     </div>
   );

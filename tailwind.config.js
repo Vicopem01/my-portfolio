@@ -7,6 +7,24 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      colors: {
+        accent: "rgb(var(--accent) / <alpha-value>)",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 30s linear infinite",
+      },
+    },
+    fontFamily: {
+      sans: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
+      display: ["var(--font-oswald)", "ui-sans-serif", "sans-serif"],
+    },
     fontSize: {
       xs: ["12px", { lineHeight: "16px" }],
       sm: ["14px", { lineHeight: "18px" }],
